@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Songs </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card style="background-color: rgb(255, 245, 231)">
+    <ion-card-header>
+      <ion-card-title style="color: rgb(76, 21, 21); font-weight: bold"
+        >Favotite Songs</ion-card-title
+      >
+      <ion-card-subtitle style="color: rgb(76, 21, 21); font-size: 1rem"
+        >This list contains the user’s favorite songs.</ion-card-subtitle
+      >
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-reorder-group
+          [disabled]="false"
+          (ionItemReorder)="handleReorder($any($event))"
+        >
+          <ion-item style="color: rgb(182, 103, 255)">
+            <ion-label>I Love You (Billie Eilish)</ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+
+          <ion-item style="color: rgb(60, 168, 132)">
+            <ion-label>Still Got The Bloues (Gary Moore) </ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+
+          <ion-item style="color: rgb(60, 139, 168)">
+            <ion-label>What a Wonderful World (Lois Armstrong)</ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+
+          <ion-item style="color: rgb(168, 118, 60)">
+            <ion-label>Flowers (Miley Cyrus) </ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+
+          <ion-item style="color: rgb(168, 60, 60)">
+            <ion-label>The Lady In Red (Chris de Burgh) </ion-label>
+            <ion-reorder slot="end"></ion-reorder>
+          </ion-item>
+        </ion-reorder-group>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
